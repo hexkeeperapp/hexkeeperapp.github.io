@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hexkeeper — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the Hexkeeper bookkeeping app. Your business data is stored in an Australian-hosted database, scoped to your business, with no advertising or tracking.">
+  <meta name="theme-color" content="#4F46E5">
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1d1d1f; --muted: #6e6e73; --accent: #4F46E5;
+      --rule: #e5e5ea; --card: #f5f5f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #000; --fg: #f5f5f7; --muted: #98989d; --accent: #818CF8; --rule: #2c2c2e; --card: #1c1c1e; }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--fg);
+      font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased; padding: 0 20px; }
+    main { max-width: 720px; margin: 0 auto; padding: 40px 0 80px; }
+    .back { display: inline-block; margin-bottom: 28px; color: var(--muted); font-size: 0.95rem; }
+    .back:hover { color: var(--fg); text-decoration: none; }
+    a { color: var(--accent); }
+    header { margin-bottom: 36px; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.015em; }
+    .effective { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    h2 { font-size: 1.3rem; margin: 42px 0 12px; letter-spacing: -0.01em; }
+    p { margin: 0 0 16px; }
+    ul { margin: 0 0 16px; padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    strong { font-weight: 600; }
+    .lead { background: var(--card); border-radius: 14px; padding: 20px 24px; }
+    .lead ul { margin-bottom: 0; }
+    .contact { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--rule); }
+    footer { margin-top: 56px; color: var(--muted); font-size: 0.85rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="/">← Hexkeeper</a>
+    <header>
+      <h1>Hexkeeper Privacy Policy</h1>
+      <p class="effective">Effective date: 27 August 2026</p>
+    </header>
+
+    <p>Hexkeeper (“the app”) is a bookkeeping app that helps Australian businesses
+       keep a GST-coded ledger and prepare their Business Activity Statement (BAS).
+       This policy explains what information the app handles, where it is stored,
+       and the choices you have. It is written to be read, not to bury things in
+       legalese.</p>
+
+    <section class="lead">
+      <h2 style="margin-top:0">The short version</h2>
+      <ul>
+        <li>Your business data is stored in <strong>Hexkeeper’s cloud database, hosted in Australia (Sydney)</strong>, scoped to your business so only its members can access it.</li>
+        <li>There is <strong>no advertising, no analytics SDKs, and no third-party tracking</strong>.</li>
+        <li>Hexkeeper <strong>never tracks your personal finances</strong> — bank transactions you skip during import are discarded, not stored.</li>
+        <li><strong>Apple handles all payments.</strong> We never see your card details.</li>
+        <li>You can <strong>export</strong> your data or <strong>delete your account</strong> from within the app at any time.</li>
+      </ul>
+    </section>
+
+    <h2>Who we are</h2>
+    <p>Hexkeeper is developed and operated by an independent Australian sole trader
+       (“we”, “us”). For any privacy question you can reach us at the address at the
+       end of this policy.</p>
+
+    <h2>What information we handle</h2>
+    <p><strong>Account information.</strong> When you create an account we store your
+       email address, which is used to sign you in and to send essential emails such
+       as password resets and business invitations.</p>
+    <p><strong>Business data you enter.</strong> The information you record to keep your
+       books — your business name and (optionally) ABN, transactions (amounts, dates,
+       categories, GST treatment, counterparties and notes), receipt images, and the
+       bank-import lines you choose to accept. This is the core of what the app is for.</p>
+    <p><strong>Subscription status.</strong> Whether your business is on a trial or a paid
+       plan, and the plan’s tier and expiry. This comes from Apple; see “Payments” below.</p>
+
+    <h2>Where your data is stored</h2>
+    <p>Your account and business data are stored using
+       <a href="https://supabase.com/privacy" rel="nofollow">Supabase</a>, our database
+       and storage provider, in a project hosted in <strong>Australia (the AWS Sydney
+       region, ap-southeast-2)</strong>. Receipt images are held in a private storage
+       bucket belonging to your business.</p>
+    <p>Access is enforced at the database level: every record belongs to a business
+       (“organisation”), and <strong>only signed-in members of that business can read or
+       write its data</strong>. Members of one business cannot see another’s.</p>
+
+    <h2>Bank import — what we don’t keep</h2>
+    <p>When you import a bank statement, Hexkeeper shows the lines to you for review.
+       Only the transactions you mark as <strong>business</strong> are saved into your
+       ledger. Lines you skip are <strong>discarded and never stored</strong>. This is
+       deliberate: the app is built so your personal spending never has to enter our
+       system, and so your BAS figures only ever reflect transactions you explicitly
+       marked as business.</p>
+
+    <h2>Receipt scanning</h2>
+    <p>When you scan a receipt, the text recognition (OCR) that reads the merchant,
+       amount and date runs <strong>entirely on your device</strong> using Apple’s
+       frameworks. The receipt image you choose to attach is uploaded to your
+       business’s private storage so it’s available as evidence across your devices and
+       to your team; you can delete it at any time.</p>
+
+    <h2>Email</h2>
+    <p>We use <a href="https://resend.com/legal/privacy-policy" rel="nofollow">Resend</a>
+       to deliver essential transactional emails (sign-in confirmation, password reset,
+       and business invitations). Only the recipient address and the message needed to
+       deliver that email are processed. We do not send marketing email.</p>
+
+    <h2>Payments</h2>
+    <p>Subscriptions are purchased and managed through the <strong>Apple App Store</strong>.
+       Apple processes your payment and manages billing and renewals — <strong>we never
+       receive or store your card or payment details</strong>. We store only the resulting
+       entitlement (your plan tier and expiry) so the app knows your subscription is active.</p>
+
+    <h2>Analytics, advertising and tracking</h2>
+    <p>Hexkeeper contains <strong>no advertising, no analytics SDKs, and no third-party
+       trackers</strong>. If you download the app from the App Store, Apple may provide us
+       with aggregated, anonymous statistics (such as download counts and crash summaries)
+       that do not identify you.</p>
+
+    <h2>How we use the information</h2>
+    <p>We use the information solely to provide the app: to authenticate you, store and
+       sync your books, generate your BAS figures and exports, send the essential emails
+       above, and enforce your subscription. We do <strong>not</strong> sell your data or
+       use it for advertising.</p>
+
+    <h2>Your control over your data</h2>
+    <ul>
+      <li><strong>Export</strong> — export your business’s transactions, categories, accounts and lodgements as a file from Settings.</li>
+      <li><strong>Delete</strong> — delete individual records in the app, or delete your account from Settings. If you are the sole owner of a business, deleting your account removes that business and its data; if others are members, you’ll be asked to hand it over first.</li>
+      <li><strong>Access &amp; correction</strong> — you can view and edit your data directly in the app, or contact us for help.</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>We keep your data for as long as your account and business exist so the app can
+       function. When you delete your account or a business as described above, its data
+       is removed from our live database. Routine backups are retained for a short period
+       and then expire.</p>
+
+    <h2>Children’s privacy</h2>
+    <p>Hexkeeper is a tool for businesses and is not directed at children. We do not
+       knowingly collect information from children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we’ll post the updated version at this address with a new
+       effective date.</p>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Questions about this policy or your data? Contact us at<br>
+      <a href="mailto:longing-fades.9q@icloud.com">longing-fades.9q@icloud.com</a></p>
+    </section>
+
+    <footer>© 2026 Hexkeeper · <a href="/">Home</a> · <a href="/terms/">Terms of Use</a></footer>
+  </main>
+</body>
+</html>
