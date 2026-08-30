@@ -6,10 +6,13 @@
   <title>Hexkeeper — Bookkeeping &amp; BAS for Australian small business</title>
   <meta name="description" content="Hexkeeper is a bookkeeping and BAS app for Australian small businesses and sole traders — GST-coded ledger, receipt scanning, bank-import triage, and BAS figures you can prepare and lodge, even when business and personal share the one account.">
   <meta name="theme-color" content="#4F46E5">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:title" content="Hexkeeper — Bookkeeping &amp; BAS for Australian small business">
   <meta property="og:description" content="GST-coded ledger, receipt scanning, and BAS prep — for Australian small businesses and sole traders who run on the one account.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hexkeeper.com.au/">
+  <meta property="og:image" content="https://hexkeeper.com.au/icon.png">
   <style>
     :root {
       --bg: #ffffff;
@@ -57,10 +60,8 @@
     }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.15rem; color: var(--fg); }
     .brand .mark {
-      width: 30px; height: 30px; border-radius: 8px;
-      background: linear-gradient(135deg, var(--grad-mid), var(--grad-bot));
-      display: inline-flex; align-items: center; justify-content: center;
-      color: #fff; font-weight: 700; font-size: 1rem;
+      width: 30px; height: 30px; border-radius: 7px;
+      object-fit: cover; display: block; flex: none;
     }
     nav .links a { color: var(--muted); font-size: 0.95rem; margin-left: 22px; }
     nav .links a:hover { color: var(--fg); text-decoration: none; }
@@ -142,7 +143,7 @@
 </head>
 <body>
   <nav>
-    <span class="brand"><span class="mark">H</span>Hexkeeper</span>
+    <span class="brand"><img class="mark" src="/icon.png" width="30" height="30" alt="">Hexkeeper</span>
     <span class="links">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
@@ -273,7 +274,7 @@
   <footer>
     <div class="wrap">
       <div class="frow">
-        <span class="brand"><span class="mark">H</span>Hexkeeper</span>
+        <span class="brand"><img class="mark" src="/icon.png" width="30" height="30" alt="">Hexkeeper</span>
         <span>
           <a href="/privacy/">Privacy</a> &nbsp;·&nbsp;
           <a href="/terms/">Terms</a> &nbsp;·&nbsp;
