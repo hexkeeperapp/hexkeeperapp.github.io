@@ -139,6 +139,12 @@
     footer a { color: var(--muted); }
     footer a:hover { color: var(--fg); text-decoration: none; }
     .disclaimer { margin-top: 22px; font-size: 0.82rem; line-height: 1.5; max-width: 70ch; }
+    /* Shown after an email confirmation link lands here (2026-11-02) */
+    .notice { display: none; margin: 18px auto 0; max-width: 640px; padding: 16px 20px; border-radius: 14px;
+      background: color-mix(in srgb, var(--accent) 12%, var(--bg)); border: 1px solid var(--accent);
+      text-align: center; font-size: 1.02rem; line-height: 1.5; }
+    .notice.show { display: block; }
+    .notice strong { color: var(--accent); }
   </style>
 </head>
 <body>
@@ -150,6 +156,8 @@
       <a href="/privacy/">Privacy</a>
     </span>
   </nav>
+
+  <div class="wrap"><p class="notice" id="notice" role="status"></p></div>
 
   <header class="hero">
     <h1>Bookkeeping &amp; BAS for Australian small business</h1>
@@ -286,5 +294,20 @@
          consider a registered tax or BAS agent. © 2026 Hexkeeper.</p>
     </div>
   </footer>
+  <script>
+    // An email confirmation link from the app lands here. Hexkeeper has already confirmed
+    // the address by then; say so and send people back to the app (2026-11-02).
+    (function () {
+      var q = new URLSearchParams(location.search), h = new URLSearchParams(location.hash.slice(1));
+      var n = document.getElementById("notice");
+      if (q.has("code")) {
+        n.innerHTML = "<strong>Email confirmed.</strong> Open Hexkeeper on your iPhone and sign in.";
+      } else if (q.has("error") || h.has("error")) {
+        n.textContent = "That link has expired or was already used. If you can sign in to Hexkeeper, you're all set.";
+      } else return;
+      n.classList.add("show");
+      history.replaceState(null, "", location.pathname);
+    })();
+  </script>
 </body>
 </html>
